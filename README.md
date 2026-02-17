@@ -34,22 +34,15 @@ npm run build
    - right-side drag to look
    - settings button for sensitivity, quality preset, and wobble toggle
 
-## GitHub Pages deployment (STEP 6)
-This repo now includes a GitHub Actions workflow at `.github/workflows/deploy-pages.yml` that:
-1. runs `npm install`
-2. runs `npm run build`
-3. uploads `dist`
-4. deploys to GitHub Pages
-
-The Vite base path is configured for repo Pages hosting:
-```ts
-base: '/liminal-ps1-web/'
-```
-
-Repository settings required:
-1. Go to **Settings → Pages**.
-2. Under **Build and deployment**, set **Source** to **GitHub Actions** (not branch source).
-3. Push to `main` to trigger deployment.
+## GitHub Pages deployment notes (for STEP 6)
+This repo has **not yet implemented STEP 6** intentionally.
+When ready for STEP 6:
+1. Set `vite.config.ts` base to:
+   ```ts
+   base: '/<REPO>/'
+   ```
+2. Add GitHub Actions workflow that builds and deploys `dist` to Pages.
+3. Enable Pages in GitHub repository settings.
 
 ## Structure
 - `src/main.ts`
